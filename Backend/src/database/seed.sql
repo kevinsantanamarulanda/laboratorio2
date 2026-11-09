@@ -54,3 +54,15 @@ INSERT INTO courses (
 ('Desarrollo de Aplicaciones Móviles', 'Fundamentos y desarrollo de aplicaciones para dispositivos móviles.', 3, 7, TRUE),
 
 ('Inteligencia Artificial', 'Fundamentos de inteligencia artificial, aprendizaje automático y algoritmos inteligentes.', 4, 8, TRUE);
+
+INSERT INTO teachers (name, email, phone, specialty, status) VALUES
+('Ana Maria Restrepo', 'ana.restrepo@uceva.edu.co', '3151234567', 'Ingenieria de Software', TRUE),
+('Carlos Andres Valencia', 'carlos.valencia@uceva.edu.co', '3162345678', 'Bases de Datos', TRUE),
+('Diana Marcela Rios', 'diana.rios@uceva.edu.co', '3173456789', 'Matematicas', TRUE)
+ON CONFLICT (email) DO NOTHING;
+
+INSERT INTO classrooms (code, building, capacity, type, status) VALUES
+('A-101', 'Bloque A', 35, 'Aula', TRUE),
+('L-201', 'Bloque B', 25, 'Laboratorio', TRUE),
+('AU-001', 'Auditorio principal', 200, 'Auditorio', TRUE)
+ON CONFLICT (code) DO NOTHING;
